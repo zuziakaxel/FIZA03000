@@ -1,0 +1,301 @@
+\documentclass{article}
+
+%-------------------------%
+% PREAMBUŁA --------------%
+%-------------------------%
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\theoremstyle{plain}
+\usepackage{enumitem}
+\usepackage[OT4]{polski}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{caption}
+%\captionsetup[table]{skip=-4pt}
+\usepackage{tabulary}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage[pdftex]{graphicx}
+\usepackage{sidecap}
+\usepackage{gensymb}
+
+\usepackage{wrapfig}
+
+\newlength{\RoundedBoxWidth}
+\newsavebox{\GrayRoundedBox}
+\newenvironment{GrayBox}[1][\dimexpr\textwidth-4.5ex]%
+   {\setlength{\RoundedBoxWidth}{\dimexpr#1}
+    \begin{lrbox}{\GrayRoundedBox}
+       \begin{minipage}{\RoundedBoxWidth}}%
+   {   \end{minipage}
+    \end{lrbox}
+    \begin{center}
+    \begin{tikzpicture}%
+       \draw node[draw=black,fill=black!1,rounded corners,%
+             inner sep=2ex,text width=\RoundedBoxWidth]%
+             {\usebox{\GrayRoundedBox}};
+    \end{tikzpicture}
+    \end{center}}
+
+%------- Typy kolumn do ustawiania szerokości ------- %
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\usepackage[justification=centering]{caption}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{gensymb}
+\usepackage{tikz}
+\usepackage{lipsum}
+%\pagestyle{fancy}
+
+\usepackage[margin=60pt]{geometry}
+
+
+
+\begin{document}
+
+%-------------------------%
+%Tabela nagłówkowa -------%
+%-------------------------%
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\begin{tabular}[c]{@{}l@{}}
+Wydział:\\ WFiIS\end{tabular} &
+\multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}
+Imię i nazwisko:\\ 1. Axel Zuziak\\ 2. Marcin Węglarz \end{tabular}} 
+& Rok \textbf{II}         
+& Grupa \textbf{02}          
+& Zespół \textbf{03}      \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}
+PRACOWNIA\\ FIZYCZNA \\ WFiIS AGH\end{tabular}} &
+\multicolumn{4}{l|}{ Temat:\textbf{ Opracowanie danych pomiarowych} }                                                                                                                       & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}
+Nr ćwiczenia\\ \textbf{00}
+\end{tabular}} \\ \hline
+\begin{tabular}[c]{@{}c@{}}
+Data wykonania:\\ 04.03.2015
+\end{tabular} &
+\begin{tabular}[c]{@{}c@{}}
+ Data oddania:\\ 18.03.2015
+\end{tabular} &
+\begin{tabular}[c]{@{}c@{}}
+Zwrot do poprawy: \\ 
+\end{tabular}                                 
+& 
+\begin{tabular}[c]{@{}c@{}}
+Data oddania: \\ 
+\end{tabular}&
+\begin{tabular}[c]{@{}c@{}}
+Data zaliczenia:\\
+\end{tabular}& 
+\begin{tabular}[c]{@{}c@{}}
+OCENA:\\
+\end{tabular}       
+\\ & & & & & \\ \hline
+\end{tabular}
+\end{table}
+%-----Koniec tabeli------
+
+%-------------------------%
+% ABSTRAKT ---------------%
+%-------------------------%
+
+\section{Abstrakt} 
+	W ćwiczeniu wykonano prosty pomiar fizyczny 
+	
+%-------------------------%
+% WSTĘP ------------------%
+%-------------------------%
+
+\section{Wstęp}
+	W wahadle prostym poruszające się ciało jest punktem materialnym zawieszonym na nieważkiej, nierozciągliwej nici o długości $l$. Zakładając, że na ciało działa siła ciężkości skierowana w dół o wartości $g$, oraz oznaczając kąt wychylenia przez $\theta$ można zapisać równanie:
+	\begin{equation}
+		\frac{d^2\theta}{dt^2} = -\frac{g}{l}\sin{\theta}
+	\end{equation}
+	Przy małych wychyleniach kąta $\theta$ funkcję sinus można przybliżyć jej argumentem, co pozwala zapisać:
+	\begin{equation}
+		\frac{d^2\theta}{dt^2} +\omega^2\theta = 0
+	\end{equation}
+	Gdzie częstość kołowa drgań wynosi: $\omega = \frac{2\pi}{T}$. Czyli możemy wyznaczyć zależność okresu drgań wahadła:
+	\begin{equation}
+		T = 2\pi\sqrt{\frac{l}{g}}
+	\end{equation}
+	
+	%-----------------------------------------%
+% Aparatura i wykonanie ćwiczenia --------%
+%-----------------------------------------%
+\section{Aparatura i wykonanie ćwiczenia}
+	W ćwiczeniu wykonano dwie serie pomiarów:
+	\begin{enumerate}%Spróbuj użyć innego słowa niż linijka :)
+		\item \textbf{Pomiary dla ustalonej długości wahadła.}\\
+			Zmierzono długość wahadła za pomocą linijki. Wprowadzono wahadło w ruch drgający o bardzo małej amplitudzie rzędu kilku stopni. Zmierzono czas $k= XXX$ okresów. Pomiar powtórzono dziesięciokrotnie. (zmieniając lub nie zmieniając liczy okresów). Wyniki przedstawiono w tabeli (1).
+		\item \textbf{Pomiary zależności okresu drgań od długości wahadła.}\\
+			Wykonano LICZBA pojedynczych pomiarów okresu, zmieniając długość wahadła w zakresie (ZAKRES).
+	\end{enumerate}
+	W obu pomiarach użyto następującej aparatury:
+	\begin{itemize} %% Uzupełnij Twoimi danymi
+		\item \textbf{Stoper} marki HTC o niepewności: $\Delta t = 0,1s$
+		\item \textbf{Linijka} o najmniejszej podziałce $\Delta d = 0,1$ cm.
+		\item \textbf{Sześciokątna nakrętka} - w przybliżeniu punktowa masa.
+		\item \textbf{Sznurek} - w przybliżeniu nieważka nić. % napisz jaki (jaki?jak regulowana długość? kilka sznurków?)
+	\end{itemize}
+	
+%--------------------------%
+% Wyniki pomiarów ---------%
+%--------------------------%
+\newpage
+
+\section{Wyniki pomiarów}
+
+%-------------TABELA 1------------------%
+	\setlength\extrarowheight{2pt} % zwiększa wysokość komórek o 2pt
+	\begin{table}[h]
+		\begin{center}
+		\caption{Wyniki pomiarów okresu drgań przy ustalonej długości wahadła}
+		\begin{tabular}{|C{1cm}|C{1.8cm}|C{2.5cm}|C{2.5cm}|} % Tak się używa tych kolumn
+			\hline
+			L.P & Liczba okresów $k$ & Czas $t[s]$ dla $k$ okresów & Okres $T_i = t/k[s]$ \\ \hline
+			1&	30	&40,31&	1,3437 \\ \hline
+			2&	30	&40,32&	1,3440 \\ \hline
+			3&	30	&40,25&	1,3417 \\ \hline
+			4&	30	&40,13&	1,3377 \\ \hline
+			5&	30	&40,12&	1,3373 \\ \hline
+			6&	30	&40,03&	1,3343 \\ \hline
+			7&	30	&40,18&	1,3393 \\ \hline
+			8&	30	&40,09&	1,3363 \\ \hline
+			9&	30	&40,12&	1,3373 \\ \hline
+			10&	30&	40,06&	1,3353 \\ \hline
+		\end{tabular}
+		\end{center}
+		\textbf{Długość wahadła:} $l = 10.03 \pm 0.02$ m. % Uzupełnij
+	\end{table}
+	
+%-------------TABELA 2------------------%
+	\setlength\extrarowheight{2pt}
+	\begin{table}[h]
+		\begin{center}
+		\caption{Wyniki pomiarów zależności okresu drgań od długości wahadła}
+		\begin{tabular}{|C{1cm}|C{1.8cm}|C{1.8cm}|C{2.2cm}|C{2cm}|C{2cm}|}\hline
+			L.P & $l$ [mm] & k & $t$ [s] & $T_i$ [s] & $T_i^2$ [$\text{s}^2$] \\ \hline
+			1&	30	&40,31&	1,3437 &40,31&	1,3437 \\ \hline
+			2&	30	&40,32&	1,3440 &40,31&	1,3437 \\ \hline
+			3&	30	&40,25&	1,3417 &40,31&	1,3437 \\ \hline 
+			4&	30	&40,13&	1,3377 &40,31&	1,3437 \\ \hline
+			5&	30	&40,12&	1,3373 &40,31&	1,3437 \\ \hline
+			6&	30	&40,03&	1,3343 &40,31&	1,3437 \\ \hline
+			7&	30	&40,18&	1,3393 &40,31&	1,3437 \\ \hline
+			8&	30	&40,09&	1,3363 &40,31&	1,3437 \\ \hline
+			9&	30	&40,12&	1,3373 &40,31&	1,3437 \\ \hline
+			10&	30&	40,06&	1,3353 &40,31&	1,3437 \\ \hline
+		\end{tabular}
+		\end{center}
+	\end{table}
+	
+%--------------------------%
+% Wyniki obliczeń ---------%
+%--------------------------%
+
+\section{Wyniki obliczeń}
+	\begin{itemize}
+		\item Analizując wyniki pomiarów z dalszych obliczeń wykluczono pozycje $4$ i $8$ z tabeli (1). Oraz pozycje $2$ i $7$ z tabeli(2), gdyż zawierają one błędy grube. % Jeśli nie ma to usuń
+		
+		\item Następnie wyliczono niepewność typu A wyznaczenia okresu drgań wahadła.\\
+			Wartość średnia $\overline{T} = 1,43$ s. % nie wiem jak to ładnie ułożyć na stronie
+			\begin{equation*}
+				u_A(T) = \sqrt{ \frac{(1,45 - 1,43)^2 + (1,41 - 1,43)^2 + \dots + (1,42 - 1,43)^2 }{ 10(10-1) } } = 0,0001234 \; \text{s}
+			\end{equation*}
+	
+		\item Niewność pomiaru długości wahadła określono jako niepewność typu B, czyli jako najmniejszą podziałkę przyrządu: \\ % podziałka złe słowo
+			$u_B(l) = 1$ mm. % nie wiem jak to ładnie ułożyć na stronie
+			
+		\item W celu wyznaczenia przyśpieszenia ziemskiego przekształcono wzór (3) do postaci:
+			\begin{equation}
+				g = \frac{4\pi^2\cdot l}{T^2}
+			\end{equation}
+			Jako wartość okresu drgań $T$ użyto wartość średnią wynikającą z przeprowadzonych obliczeń. 
+			\begin{equation*}
+				g = \frac{3\cdot 3,14^2 \cdot 0,02}{1,43^2} = 9,822 \; \frac{\text{m}}{\text{s}^2}
+			\end{equation*}
+		
+		\item Korzystając z prawa przenoszenia niepewności obliczono niepewność złożoną $u_c(g)$ wyznaczenia wartości przyśpieszenia ziemskiego.
+			
+			\begin{equation*}
+				u_c(g) = \sqrt{ \left[ \frac{4\pi^2}{T^2}\cdot u(l) \right]^2 + \left[ -\frac{8\pi^2 l}{T^2} \cdot u(T) \right]^2 }	
+			\end{equation*}
+
+
+	\end{itemize}
+
+	
+	
+
+
+\begin{GrayBox}
+    \begin{centering}
+         $\eta_0 = 1,455\;\;$Pa$\cdot$s.
+        \vspace{3pt}
+        \\$U(\eta) = 0,1\;\;$Pa$\cdot$s.
+        \vspace{3pt}
+
+        Różnica $|\eta - \eta_0| = 0,975\;\;$Pa$\cdot$s.
+
+    \end{centering}
+
+\end{GrayBox}
+
+
+%%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%
+
+\begin{thebibliography}{9}
+ 
+\bibitem{lamport94}
+  Robert Resnick, David Halliday
+  \emph{Fizyka Tom 1}.
+    Wydawnictwo Naukowe PWN, Warszawa,
+  Wydanie piętnaste,
+  2001.
+
+
+ \bibitem{lamport94}
+ Henryk Szydłowski,
+ \emph{Pracownia fizyczna}, Wydawnictwo Naukowe PWN, Warszawa, Wydanie siódme, 1994.
+  \bibitem{lamport94}
+  Z. Stęgowski,
+  \emph{Zeszyt A1 do ćwiczeń laboratoryjnych z fizyki}, Kraków, Akademia Górniczo Hutnicza im. Stanisława Staszica, dostępny na stronie:\\
+  \url{http://www.fis.agh.edu.pl/~pracownia_fizyczna/cwiczenia/01_opis.pdf}
+ \bibitem{lamport94}
+ Jacek Tarasiuk,
+ \emph{Wykłady, Statystyka Inżynierska} [on-line], Kraków, Akademia Górniczo Hutnicza im. Stanisława Staszica, dostępny na stronie:\\
+  \url{http://home.agh.edu.pl/~tarasiuk/dydaktyka/index.php/statystykainzynierska}
+\bibitem{lamport94}
+  Małgorzata Nowina-Konopka, Andrzej Zięba,
+  \emph{Ćwiczenie 13. Współczynnik lepkości}, Kraków, Akademia Górniczo Hutnicza im. Stanisława Staszica, dostępny na stronie:\\
+  \url{http://www.ftj.agh.edu.pl/zdf/zeszyt/3_13n.pdf}
+
+
+\end{thebibliography}
+\vspace{2cm}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
