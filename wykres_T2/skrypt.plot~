@@ -1,0 +1,12 @@
+set terminal png
+set grid
+set output "wykres2.png"
+set xlabel "l [mm]"
+set ylabel "T^2 [s^2]"
+set xrange [0:240]
+set yrange [0:1]
+
+#fit a*sqrt(b*x) "data" via a,b
+#f(x)=a*sqrt(b*x)
+
+plot "data" using 1:2 w p notitle pt 7

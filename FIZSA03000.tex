@@ -3,27 +3,37 @@
 %-------------------------%
 % PREAMBUŁA --------------%
 %-------------------------%
-
-\usepackage[T1]{fontenc}
-\usepackage[utf8x]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\theoremstyle{plain}
-\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
 \usepackage[OT4]{polski}
 \usepackage{caption}
+\usepackage{amsmath}
+\usepackage{tikz}
 \usepackage{subcaption}
 \usepackage{tabularx}
 \usepackage{caption}
-%\captionsetup[table]{skip=-4pt}
-\usepackage{tabulary}
 \usepackage{array}
 \usepackage{hyperref}
-\usepackage[pdftex]{graphicx}
-\usepackage{sidecap}
-\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[justification=centering]{caption}
+\usepackage[margin=60pt]{geometry}
 
-\usepackage{wrapfig}
+
+
+%\usepackage[T1]{fontenc}
+%\usepackage{amsthm}
+%\theoremstyle{plain}
+%\usepackage{enumitem}
+%\captionsetup[table]{skip=-4pt}
+%\usepackage{tabulary}
+%\usepackage{sidecap}
+%\usepackage{gensymb}
+%\usepackage{wrapfig}
+%\usepackage{lastpage}
+%\usepackage{gensymb}
+%\usepackage{lipsum}
+%\pagestyle{fancy}
+
 
 \newlength{\RoundedBoxWidth}
 \newsavebox{\GrayRoundedBox}
@@ -46,16 +56,10 @@
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-\usepackage[justification=centering]{caption}
-\usepackage{graphicx}
-\usepackage{lastpage}
-\usepackage{fancyhdr}
-\usepackage{gensymb}
-\usepackage{tikz}
-\usepackage{lipsum}
-%\pagestyle{fancy}
 
-\usepackage[margin=60pt]{geometry}
+
+
+
 
 
 
@@ -119,14 +123,17 @@ OCENA:\\
 	W wahadle prostym poruszające się ciało jest punktem materialnym zawieszonym na nieważkiej, nierozciągliwej nici o długości $l$. Zakładając, że na ciało działa siła ciężkości skierowana w dół o wartości $g$, oraz oznaczając kąt wychylenia przez $\theta$ można zapisać równanie:
 	\begin{equation}
 		\frac{d^2\theta}{dt^2} = -\frac{g}{l}\sin{\theta}
+		\label{wzor1}
 	\end{equation}
 	Przy małych wychyleniach kąta $\theta$ funkcję sinus można przybliżyć jej argumentem, co pozwala zapisać:
 	\begin{equation}
 		\frac{d^2\theta}{dt^2} +\omega^2\theta = 0
+		\label{wzor2}
 	\end{equation}
 	Gdzie częstość kołowa drgań wynosi: $\omega = \frac{2\pi}{T}$. Czyli możemy wyznaczyć zależność okresu drgań wahadła:
 	\begin{equation}
 		T = 2\pi\sqrt{\frac{l}{g}}
+		\label{wzor3}
 	\end{equation}
 	
 	%-----------------------------------------%
@@ -157,46 +164,52 @@ OCENA:\\
 
 %-------------TABELA 1------------------%
 	\setlength\extrarowheight{2pt} % zwiększa wysokość komórek o 2pt
+\textbf{Długość wahadła:} $l = 19,0 \pm 0,1$ cm. %
+
 	\begin{table}[h]
-		\begin{center}
+		\centering
 		\caption{Wyniki pomiarów okresu drgań przy ustalonej długości wahadła}
 		\begin{tabular}{|C{1cm}|C{1.8cm}|C{2.5cm}|C{2.5cm}|} % Tak się używa tych kolumn
 			\hline
 			L.P & Liczba okresów $k$ & Czas $t[s]$ dla $k$ okresów & Okres $T_i = t/k[s]$ \\ \hline
-			1&	30	&40,31&	1,3437 \\ \hline
-			2&	30	&40,32&	1,3440 \\ \hline
-			3&	30	&40,25&	1,3417 \\ \hline
-			4&	30	&40,13&	1,3377 \\ \hline
-			5&	30	&40,12&	1,3373 \\ \hline
-			6&	30	&40,03&	1,3343 \\ \hline
-			7&	30	&40,18&	1,3393 \\ \hline
-			8&	30	&40,09&	1,3363 \\ \hline
-			9&	30	&40,12&	1,3373 \\ \hline
-			10&	30&	40,06&	1,3353 \\ \hline
+			1& 40 & 34,1 &	0,8525 \\ \hline
+			2& 40 & 35,1 &	0,8775 \\ \hline
+			3& 40 & 35,1 &	0,8775 \\ \hline
+			4& 40 & 35,1 &	0,8775 \\ \hline
+			5& 40 & 35,0 &	0,8750 \\ \hline
+			6& 40 & 35,0 &	0,8750 \\ \hline
+			7& 40 & 35,0 &	0,8750 \\ \hline
+			8& 40 & 35,1 &	0,8775 \\ \hline
+			9& 40 & 34,9 &	0,8725 \\ \hline
+			10&	40 & 35,0 &	0,8750 \\ \hline
 		\end{tabular}
-		\end{center}
-		\textbf{Długość wahadła:} $l = 10.03 \pm 0.02$ m. % Uzupełnij
+		\label{tabela1}
 	\end{table}
 	
 %-------------TABELA 2------------------%
 	\setlength\extrarowheight{2pt}
 	\begin{table}[h]
-		\begin{center}
+		\centering
 		\caption{Wyniki pomiarów zależności okresu drgań od długości wahadła}
 		\begin{tabular}{|C{1cm}|C{1.8cm}|C{1.8cm}|C{2.2cm}|C{2cm}|C{2cm}|}\hline
 			L.P & $l$ [mm] & k & $t$ [s] & $T_i$ [s] & $T_i^2$ [$\text{s}^2$] \\ \hline
-			1&	30	&40,31&	1,3437 &40,31&	1,3437 \\ \hline
-			2&	30	&40,32&	1,3440 &40,31&	1,3437 \\ \hline
-			3&	30	&40,25&	1,3417 &40,31&	1,3437 \\ \hline 
-			4&	30	&40,13&	1,3377 &40,31&	1,3437 \\ \hline
-			5&	30	&40,12&	1,3373 &40,31&	1,3437 \\ \hline
-			6&	30	&40,03&	1,3343 &40,31&	1,3437 \\ \hline
-			7&	30	&40,18&	1,3393 &40,31&	1,3437 \\ \hline
-			8&	30	&40,09&	1,3363 &40,31&	1,3437 \\ \hline
-			9&	30	&40,12&	1,3373 &40,31&	1,3437 \\ \hline
-			10&	30&	40,06&	1,3353 &40,31&	1,3437 \\ \hline
+			1 & 110 & 20 & 13,3 & 0,665 & 0,44222 \\\hline 			
+			2 & 125 & 20 & 14,2 & 0,71 & 0,5041 \\ \hline
+			3 & 130 & 20 & 14,3 & 0,715 & 0,511225 \\ \hline
+			4 & 135 & 20 & 14,6 & 0,73 & 0,5329 \\ \hline
+			5 & 145 & 20 & 15,2 & 0,76 & 0,5776 \\ \hline
+			6 & 150 & 20 & 15,4 & 0,77 & 0,5929 \\ \hline
+			7 & 155 & 20 & 15,7 & 0,785 & 0,616225 \\ \hline
+			8 & 160 & 20 & 15,9 & 0,795 & 0,632025 \\ \hline
+			9 & 165 & 20 & 16,1 & 0,805 & 0,648025 \\ \hline
+			10 & 170 & 20 & 16,4 & 0,82 & 0,6724 \\ \hline
+			11 & 175 & 20 & 16,6 & 0,83 & 0,6889 \\ \hline
+			12 & 180 & 20 & 16,8 & 0,84 & 0,7056 \\ \hline
+			13 & 185 & 20 & 17,1 & 0,855 & 0,731025 \\ \hline
+			14 & 190 & 20 & 17,5 & 0,875 & 0,765625 \\ \hline
+			15 & 195 & 20 & 17,7 & 0,885 & 0,783225 \\ \hline		
 		\end{tabular}
-		\end{center}
+		\label{tabela2}
 	\end{table}
 	
 %--------------------------%
@@ -204,52 +217,95 @@ OCENA:\\
 %--------------------------%
 
 \section{Wyniki obliczeń}
-	\begin{itemize}
-		\item Analizując wyniki pomiarów z dalszych obliczeń wykluczono pozycje $4$ i $8$ z tabeli (1). Oraz pozycje $2$ i $7$ z tabeli(2), gdyż zawierają one błędy grube. % Jeśli nie ma to usuń
+ \begin{itemize}
+	\item Analizując wyniki pomiarów z dalszych obliczeń wykluczono pozycje $1$ z tabeli (\ref{tabela1}).
 		
-		\item Następnie wyliczono niepewność typu A wyznaczenia okresu drgań wahadła.\\
-			Wartość średnia $\overline{T} = 1,43$ s. % nie wiem jak to ładnie ułożyć na stronie
-			\begin{equation*}
-				u_A(T) = \sqrt{ \frac{(1,45 - 1,43)^2 + (1,41 - 1,43)^2 + \dots + (1,42 - 1,43)^2 }{ 10(10-1) } } = 0,0001234 \; \text{s}
-			\end{equation*}
+	\item Następnie wyliczono niepewność typu A wyznaczenia okresu drgań wahadła jako estymator odchylenia standardowego średniej oraz wartość
+	średnią liczoną jako średnia arytmetyczna wyników.\\\\
+	 $\overline{T} = 0,8735$ s.\\ % nie wiem jak to ładnie ułożyć na stronie
+	 $u_A(T) = 0,0024$ s
 	
-		\item Niewność pomiaru długości wahadła określono jako niepewność typu B, czyli jako najmniejszą podziałkę przyrządu: \\ % podziałka złe słowo
-			$u_B(l) = 1$ mm. % nie wiem jak to ładnie ułożyć na stronie
-			
-		\item W celu wyznaczenia przyśpieszenia ziemskiego przekształcono wzór (3) do postaci:
-			\begin{equation}
-				g = \frac{4\pi^2\cdot l}{T^2}
-			\end{equation}
-			Jako wartość okresu drgań $T$ użyto wartość średnią wynikającą z przeprowadzonych obliczeń. 
-			\begin{equation*}
-				g = \frac{3\cdot 3,14^2 \cdot 0,02}{1,43^2} = 9,822 \; \frac{\text{m}}{\text{s}^2}
-			\end{equation*}
+	%	\begin{equation*}
+	%		u_A(T) = \sqrt{ \frac{(1,45 - 1,43)^2 + (1,41 - 1,43)^2 + \dots + (1,42 - 1,43)^2 }{ 10(10-1) } } = 0,0001234 \; \text{s}
+	%	\end{equation*}
+
+	\item Niewność pomiaru długości wahadła określono jako niepewność typu B i przyjęto wartość działki elementarnej: \\\\ % podziałka złe słowo
+		$u_B(l) = 0,1$ cm.\\ % nie wiem jak to ładnie ułożyć na stronie
 		
-		\item Korzystając z prawa przenoszenia niepewności obliczono niepewność złożoną $u_c(g)$ wyznaczenia wartości przyśpieszenia ziemskiego.
-			
-			\begin{equation*}
-				u_c(g) = \sqrt{ \left[ \frac{4\pi^2}{T^2}\cdot u(l) \right]^2 + \left[ -\frac{8\pi^2 l}{T^2} \cdot u(T) \right]^2 }	
-			\end{equation*}
+	\item W celu wyznaczenia przyśpieszenia ziemskiego przekształcono wzór (\ref{wzor3}) do postaci:
+		\begin{equation}
+			g = \frac{4\pi^2\cdot l}{T^2}
+		\end{equation}
+		Po podstawieniu:\\\\
+		\[ g = 9,831 \frac{m}{s^2} \]\\
+		 
+	%	\begin{equation*}
+	%		g = \frac{3\cdot 3,14^2 \cdot 0,02}{1,43^2} = 9,822 \; \frac{\text{m}}{\text{s}^2}
+	%	\end{equation*}
+		
+	\item Korzystając z prawa przenoszenia niepewności obliczono niepewność złożoną $u_c(g)$ wyznaczenia wartości przyśpieszenia ziemskiego.
+		
+		\begin{equation*}
+			u_c(g) = \sqrt{ \left[ \frac{4\pi^2}{T^2}\cdot u(l) \right]^2 + \left[ -\frac{8\pi^2 l}{T^3} \cdot u(T) \right]^2 }
+			 = 	0,075 \frac{m}{s^2}
+		\end{equation*}\\
+	Oba człony składające się na niepewność $g$ mają porównywalne wartości.\\
+	
+	
+	
+	\item Kolejno narysowano wykres okresu od długości wahadła $T(l)$ oraz naniesiono na niego krzywą \\
+	$f(x)=2\pi\sqrt{\frac{x}{g}}$\\
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.7\textwidth]{wykres_T/wykres1.png}
+		\caption{Wykres zależności okresu wahadła od jego długości.}
+		\label{wykres1}
+	\end{figure}
+	
+	
+	
+	\item Chcąc wyznaczyć wartość przyspieszenia $g$ graficznie, narysowano wykres funkcji, 
+	gdzie na osi $y$ odłożono wartości $T^2$ a na osi $x$ długość wahadła $l$. Następnie korzystając z funkcji gnuplota dopasowano prostą $y=ax$ do punktów pomiarowych, gdzie wyznaczony współczynnik $a$: \\
+	\[a = 3,968 \pm 0,010
+	\]
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.7\textwidth]{wykres_T2/wykres2.png}
+		\caption{Wykres zależności kwadratu okresu wahadła od jego długości.}
+		\label{wykres2}
+	\end{figure}
+	
+	Przekształcając wzór (\ref{wzor3}) poprzez podniesienie go do kwadratu i przyrównując go do funkcji liniowej $y=ax$ otrzymano wzór na $a$:\\
+	\[a=\frac{4\pi^2}{g}
+	\]\\
+	W kolejnym kroku wyliczono $g$ z powyższego wzoru oraz $u(g)$ przy pomocy wartości $u(a)$ z prawa przenoszenia niepewności:\\
+	\[u(g) = \frac{4\pi^2}{a^2}u(a) = 0,025 \frac{m}{s^2}
+	\]\\
+	Po podstawieniu:\\
+	\[g = 9,949 \pm 0,025 \frac{m}{s^2}
+	\]
+	
 
-
-	\end{itemize}
+  \end{itemize}
 
 	
 	
 
 
-\begin{GrayBox}
-    \begin{centering}
-         $\eta_0 = 1,455\;\;$Pa$\cdot$s.
-        \vspace{3pt}
-        \\$U(\eta) = 0,1\;\;$Pa$\cdot$s.
-        \vspace{3pt}
+%\begin{GrayBox}
+ %   \begin{centering}
+  %       $\eta_0 = 1,455\;\;$Pa$\cdot$s.
+   %     \vspace{3pt}
+    %    \\$U(\eta) = 0,1\;\;$Pa$\cdot$s.
+     %   \vspace{3pt}
 
-        Różnica $|\eta - \eta_0| = 0,975\;\;$Pa$\cdot$s.
+   %     Różnica $|\eta - \eta_0| = 0,975\;\;$Pa$\cdot$s.
 
-    \end{centering}
+    %\end{centering}
 
-\end{GrayBox}
+%\end{GrayBox}
 
 
 %%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%
