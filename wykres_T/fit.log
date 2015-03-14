@@ -1,0 +1,47 @@
+
+
+*******************************************************************************
+Wed Mar 11 22:04:34 2015
+
+
+FIT:    data read from "data"
+        format = z
+        x range restricted to [0.00000 : 240.000]
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: a*sqrt(b*x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2080.83           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 9.93681
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.000206948
+rel. change during last iteration : -1.27046e-14
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00398987
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.59191e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.0815474        +/- 7.925e+08    (9.718e+11%)
+b               = 0.59667          +/- 1.16e+10     (1.944e+12%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -1.000  1.000 
