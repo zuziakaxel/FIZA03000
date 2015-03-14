@@ -144,16 +144,16 @@ OCENA:\\
 	W ćwiczeniu wykonano dwie serie pomiarów:
 	\begin{enumerate}%Spróbuj użyć innego słowa niż linijka :)
 		\item \textbf{Pomiary dla ustalonej długości wahadła.}\\
-			Zmierzono długość wahadła za pomocą linijki. Wprowadzono wahadło w ruch drgający o bardzo małej amplitudzie rzędu kilku stopni. Zmierzono czas $k= XXX$ okresów. Pomiar powtórzono dziesięciokrotnie. (zmieniając lub nie zmieniając liczy okresów). Wyniki przedstawiono w tabeli (1).
+			Zmierzono długość wahadła za pomocą linijki. Wprowadzono wahadło w ruch drgający o bardzo małej amplitudzie rzędu kilku stopni. Zmierzono czas $k= 40$ okresów. Pomiar powtórzono dziesięciokrotnie nie zmieniając liczy okresów. Wyniki przedstawiono w tabeli (\ref{tabela1}).
 		\item \textbf{Pomiary zależności okresu drgań od długości wahadła.}\\
-			Wykonano LICZBA pojedynczych pomiarów okresu, zmieniając długość wahadła w zakresie (ZAKRES).
+			Wykonano 15 pomiarów 20 okresów, zmieniając długość wahadła w zakresie od $11$ do $19,5$ cm.
 	\end{enumerate}
 	W obu pomiarach użyto następującej aparatury:
 	\begin{itemize} %% Uzupełnij Twoimi danymi
 		\item \textbf{Stoper} marki HTC o niepewności: $\Delta t = 0,1s$
 		\item \textbf{Linijka} o najmniejszej podziałce $\Delta d = 0,1$ cm.
 		\item \textbf{Sześciokątna nakrętka} - w przybliżeniu punktowa masa.
-		\item \textbf{Sznurek} - w przybliżeniu nieważka nić. % napisz jaki (jaki?jak regulowana długość? kilka sznurków?)
+		\item \textbf{Sznurek} - w przybliżeniu nieważka nić. 
 	\end{itemize}
 	
 %--------------------------%
@@ -166,7 +166,7 @@ OCENA:\\
 %-------------TABELA 1------------------%
 	\setlength\extrarowheight{2pt} % zwiększa wysokość komórek o 2pt
 \textbf{Długość wahadła:} $l = 19,0 \pm 0,1$ cm. %
-
+\vspace{1cm}
 	\begin{table}[h]
 		\centering
 		\caption{Wyniki pomiarów okresu drgań przy ustalonej długości wahadła}
@@ -188,12 +188,13 @@ OCENA:\\
 	\end{table}
 	
 %-------------TABELA 2------------------%
+\vspace{1.5cm}
 	\setlength\extrarowheight{2pt}
 	\begin{table}[h]
 		\centering
 		\caption{Wyniki pomiarów zależności okresu drgań od długości wahadła}
 		\begin{tabular}{|C{1cm}|C{1.8cm}|C{1.8cm}|C{2.2cm}|C{2cm}|C{2cm}|}\hline
-			L.P & $l$ [mm] & k & $t$ [s] & $T_i$ [s] & $T_i^2$ [$\text{s}^2$] \\ \hline
+			L.P & $l$ [mm] & $k$ & $t$ [s] & $T_i$ [s] & $T_i^2$ [$\text{s}^2$] \\ \hline
 			1 & 110 & 20 & 13,3 & 0,665 & 0,44222 \\\hline 			
 			2 & 125 & 20 & 14,2 & 0,71 & 0,5041 \\ \hline
 			3 & 130 & 20 & 14,3 & 0,715 & 0,511225 \\ \hline
@@ -216,22 +217,33 @@ OCENA:\\
 %--------------------------%
 % Wyniki obliczeń ---------%
 %--------------------------%
-
+\newpage
 \section{Wyniki obliczeń}
  \begin{itemize}
-	\item Analizując wyniki pomiarów z dalszych obliczeń wykluczono pozycję $1$ z tabeli (\ref{tabela1}).
+	\item Analizując wyniki pomiarów pod kątem błędów grubych z dalszych obliczeń wykluczono pozycję $1$ z tabeli (\ref{tabela1}).
 		
 	\item Następnie wyliczono niepewność typu A wyznaczenia okresu drgań wahadła jako estymator odchylenia standardowego średniej oraz wartość
-	średnią liczoną jako średnia arytmetyczna wyników.\\\\
-	 $\overline{T} = 0,8735$ s.\\ % nie wiem jak to ładnie ułożyć na stronie
-	 $u_A(T) = 0,0024$ s
+	średnią liczoną jako średnia arytmetyczna wyników.\\
+	\begin{figure*}[h!]
+		\centering
+			 $\overline{T} = 0,8735$ s\\
+			 \vspace{0.2cm}
+			 $u_A(T) = 0,0024$ s
 	
+	\end{figure*}
+
+
 	%	\begin{equation*}
 	%		u_A(T) = \sqrt{ \frac{(1,45 - 1,43)^2 + (1,41 - 1,43)^2 + \dots + (1,42 - 1,43)^2 }{ 10(10-1) } } = 0,0001234 \; \text{s}
 	%	\end{equation*}
 
-	\item Niepewność pomiaru długości wahadła określono jako niepewność typu B i przyjęto wartość działki elementarnej: \\\\ % podziałka złe słowo
-		$u_B(l) = 0,1$ cm.\\ % nie wiem jak to ładnie ułożyć na stronie
+	\item Niepewność pomiaru długości wahadła określono jako niepewność typu B i przyjęto wartość działki elementarnej: \\
+		\begin{figure*}[h!]
+			\centering
+			$u_B(l) = 0,1$ cm
+		\end{figure*}
+
+
 		
 	\item W celu wyznaczenia przyśpieszenia ziemskiego przekształcono wzór (\ref{wzor3}) do postaci:
 		\begin{equation}
@@ -296,7 +308,7 @@ OCENA:\\
   \end{itemize}
 
 \section{Wnioski}
-	W obliczeniach pojawił się jeden błąd gruby, po którego odrzuceniu wartość obliczonego przyśpieszenia ziemskiego jest równa w granicach niepewności rozszerzonej z wartością tabelaryczną.
+	W wynikach pomiarów pojawił się jeden błąd gruby, po którego odrzuceniu wartość obliczonego przyśpieszenia ziemskiego jest równa w granicach niepewności rozszerzonej z wartością tabelaryczną. 
 	
 
 

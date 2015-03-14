@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.6.21)  14 MAR 2015 17:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.6.21)  14 MAR 2015 17:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -799,127 +799,111 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 153.
  [1
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 224--228
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 251--253
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--235
+Underfull \hbox (badness 10000) in paragraph at lines 251--253
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--235
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 239--241
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--241
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
+Underfull \hbox (badness 10000) in paragraph at lines 285--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--254
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--275
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 279--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 287--289
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 290--292
+Underfull \hbox (badness 10000) in paragraph at lines 291--293
 
  []
 
 [3]
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 321.
- (/usr/local/texlive/2014/texmf-dist/tex/latex/polski/ot4cmtt.fd
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 299--301
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--304
+
+ []
+
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 333.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 ) [4pdfTeX warning (ext4): destination with the same identifier (name{cite.lamport94}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.336 \newpage
+l.348 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name{cite.lamport94}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.336 \newpage
+l.348 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name{cite.lamport94}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.336 \newpage
+l.348 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name{cite.lamport94}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.336 \newpage
-              ] <wykres_T/wykres1.png, id=84, 481.8pt x 361.35pt>
+l.348 \newpage
+              ] <wykres_T/wykres1.png, id=87, 481.8pt x 361.35pt>
 File: wykres_T/wykres1.png Graphic file (type png)
  <use wykres_T/wykres1.png>
-Package pdftex.def Info: wykres_T/wykres1.png used on input line 339.
+Package pdftex.def Info: wykres_T/wykres1.png used on input line 351.
 (pdftex.def)             Requested size: 346.00499pt x 259.51015pt.
- <wykres_T2/wykres2.png, id=85, 481.8pt x 361.35pt>
+ <wykres_T2/wykres2.png, id=88, 481.8pt x 361.35pt>
 File: wykres_T2/wykres2.png Graphic file (type png)
  <use wykres_T2/wykres2.png>
-Package pdftex.def Info: wykres_T2/wykres2.png used on input line 347.
+Package pdftex.def Info: wykres_T2/wykres2.png used on input line 359.
 (pdftex.def)             Requested size: 346.00499pt x 259.51015pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 365.
  [5 <./wykres_T/wykres1.png> <./wykres_T2/wykres2.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 365.
  (/Users/zuziakaxel/projects/FIZA03000/.texpadtmp/FIZSA03000.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 365.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 365.
 Package rerunfilecheck Info: File `FIZSA03000.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 353.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 365.
  ) 
 Here is how much of TeX's memory you used:
- 17532 strings out of 493117
- 324354 string characters out of 6135433
- 402384 words of memory out of 5000000
+ 17534 strings out of 493117
+ 324386 string characters out of 6135433
+ 401384 words of memory out of 5000000
  20677 multiletter control sequences out of 15000+600000
  7903 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,15n,54p,414b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,15n,54p,414b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/pl/plrm.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/pl/plr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/pl/plti10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/pl/pltt10.pfb>
-Output written on /Users/zuziakaxel/projects/FIZA03000/.texpadtmp/FIZSA03000.pdf (5 pages, 142167 bytes).
+Output written on /Users/zuziakaxel/projects/FIZA03000/.texpadtmp/FIZSA03000.pdf (5 pages, 141768 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
+ 148 PDF objects out of 1000 (max. 8388607)
+ 122 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
