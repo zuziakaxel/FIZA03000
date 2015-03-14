@@ -113,7 +113,8 @@ OCENA:\\
 %-------------------------%
 
 \section{Abstrakt} 
-	W ćwiczeniu wykonano prosty pomiar fizyczny 
+	W ćwiczeniu wykonano prosty pomiar fizyczny w celu przedstawienia i rozwiązania szeregu zagadnień statystycznych. Takie jak niepewność typu A i B, niepewność rozszerzona, porównanie wartości zmierzonej z tabelaryczną. 
+	% DOpisz może jeszcze coś%
 	
 %-------------------------%
 % WSTĘP ------------------%
@@ -218,7 +219,7 @@ OCENA:\\
 
 \section{Wyniki obliczeń}
  \begin{itemize}
-	\item Analizując wyniki pomiarów z dalszych obliczeń wykluczono pozycje $1$ z tabeli (\ref{tabela1}).
+	\item Analizując wyniki pomiarów z dalszych obliczeń wykluczono pozycję $1$ z tabeli (\ref{tabela1}).
 		
 	\item Następnie wyliczono niepewność typu A wyznaczenia okresu drgań wahadła jako estymator odchylenia standardowego średniej oraz wartość
 	średnią liczoną jako średnia arytmetyczna wyników.\\\\
@@ -229,7 +230,7 @@ OCENA:\\
 	%		u_A(T) = \sqrt{ \frac{(1,45 - 1,43)^2 + (1,41 - 1,43)^2 + \dots + (1,42 - 1,43)^2 }{ 10(10-1) } } = 0,0001234 \; \text{s}
 	%	\end{equation*}
 
-	\item Niewność pomiaru długości wahadła określono jako niepewność typu B i przyjęto wartość działki elementarnej: \\\\ % podziałka złe słowo
+	\item Niepewność pomiaru długości wahadła określono jako niepewność typu B i przyjęto wartość działki elementarnej: \\\\ % podziałka złe słowo
 		$u_B(l) = 0,1$ cm.\\ % nie wiem jak to ładnie ułożyć na stronie
 		
 	\item W celu wyznaczenia przyśpieszenia ziemskiego przekształcono wzór (\ref{wzor3}) do postaci:
@@ -246,37 +247,41 @@ OCENA:\\
 	\item Korzystając z prawa przenoszenia niepewności obliczono niepewność złożoną $u_c(g)$ wyznaczenia wartości przyśpieszenia ziemskiego.
 		
 		\begin{equation*}
-			u_c(g) = \sqrt{ \left[ \frac{4\pi^2}{T^2}\cdot u(l) \right]^2 + \left[ -\frac{8\pi^2 l}{T^3} \cdot u(T) \right]^2 }
-			 = 	0,075 \frac{m}{s^2}
+			u_c(g) = \sqrt{ \left[ \frac{4\pi^2}{T^2}\cdot u(l) \right]^2 + \left[ -\frac{8\pi^2 l}{T^2} \cdot u(T) \right]^2 }
+			 = 	0,075 \; \frac{\text{m}}{\text{s}^2}
 		\end{equation*}\\
 	Oba człony składające się na niepewność $g$ mają porównywalne wartości.\\
 	
 	
+	\item Obliczono niepewność rozszerzoną przyjmując zgodnie z pozycją w literaturze [\ref{statystyka}] wartość $k=2$:
+		\begin{equation*}
+			U(g)=k\cdot u_c(g) = 2\cdot 0,075 = 0,15 \; \frac{\text{m}}{\text{s}^2}
+		\end{equation*}
+	\item Sprawdzono czy uzyskana wartość przyspieszenia ziemskiego jest zgodna w granicach niepewności rozszerzonej, z wartością tabelaryczną ($g_0)$:
+	\begin{figure*}[h!]
+		\centering
+			Dla Krakowa wartość $g_0 = 9,811\; \frac{\text{m}}{\text{s}^2}$\\
+			Różnica $|g-g_0| = 0,021 < 0,15 = U(g)$
+	\end{figure*}
+
+
 	
-	\item Kolejno narysowano wykres okresu od długości wahadła $T(l)$ oraz naniesiono na niego krzywą \\
+	Zatem wartość zmierzoną możemy uznać za zgodną.
+	
+	
+	
+	\item Kolejno narysowano wykres (\ref{wykres1}) okresu od długości wahadła $T(l)$ oraz naniesiono na niego krzywą: \\
 	$f(x)=2\pi\sqrt{\frac{x}{g}}$\\
 	
-	\begin{figure}[ht]
-		\centering
-		\includegraphics[width=0.7\textwidth]{wykres_T/wykres1.png}
-		\caption{Wykres zależności okresu wahadła od jego długości.}
-		\label{wykres1}
-	\end{figure}
+
 	
 	
-	
-	\item Chcąc wyznaczyć wartość przyspieszenia $g$ graficznie, narysowano wykres funkcji, 
-	gdzie na osi $y$ odłożono wartości $T^2$ a na osi $x$ długość wahadła $l$. Następnie korzystając z funkcji gnuplota dopasowano prostą $y=ax$ do punktów pomiarowych, gdzie wyznaczony współczynnik $a$: \\
+	\item Chcąc wyznaczyć wartość przyspieszenia $g$ graficznie, narysowano wykres (\ref{wykres2}) funkcji, 
+	gdzie na osi $y$ odłożono wartości $T^2$ a na osi $x$ długość wahadła $l$. Następnie korzystając z funkcji programu Gnuplot dopasowano prostą $y=ax$ do punktów pomiarowych, gdzie wyznaczony współczynnik $a$: \\ % Było 'funkcji gnuplota xD'
 	\[a = 3,968 \pm 0,010
 	\]
 	
-	\begin{figure}[ht]
-		\centering
-		\includegraphics[width=0.7\textwidth]{wykres_T2/wykres2.png}
-		\caption{Wykres zależności kwadratu okresu wahadła od jego długości.}
-		\label{wykres2}
-	\end{figure}
-	
+
 	Przekształcając wzór (\ref{wzor3}) poprzez podniesienie go do kwadratu i przyrównując go do funkcji liniowej $y=ax$ otrzymano wzór na $a$:\\
 	\[a=\frac{4\pi^2}{g}
 	\]\\
@@ -290,22 +295,9 @@ OCENA:\\
 
   \end{itemize}
 
+\section{Wnioski}
+	W obliczeniach pojawił się jeden błąd gruby, po którego odrzuceniu wartość obliczonego przyśpieszenia ziemskiego jest równa w granicach niepewności rozszerzonej z wartością tabelaryczną.
 	
-	
-
-
-%\begin{GrayBox}
- %   \begin{centering}
-  %       $\eta_0 = 1,455\;\;$Pa$\cdot$s.
-   %     \vspace{3pt}
-    %    \\$U(\eta) = 0,1\;\;$Pa$\cdot$s.
-     %   \vspace{3pt}
-
-   %     Różnica $|\eta - \eta_0| = 0,975\;\;$Pa$\cdot$s.
-
-    %\end{centering}
-
-%\end{GrayBox}
 
 
 %%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%
@@ -326,21 +318,37 @@ OCENA:\\
   \bibitem{lamport94}
   Z. Stęgowski,
   \emph{Zeszyt A1 do ćwiczeń laboratoryjnych z fizyki}, Kraków, Akademia Górniczo Hutnicza im. Stanisława Staszica, dostępny na stronie:\\
-  \url{http://www.fis.agh.edu.pl/~pracownia_fizyczna/cwiczenia/01_opis.pdf}
+  \url{http://www.fis.agh.edu.pl/~pracownia_fizyczna/cwiczenia/00_wykon.pdf}
  \bibitem{lamport94}
  Jacek Tarasiuk,
  \emph{Wykłady, Statystyka Inżynierska} [on-line], Kraków, Akademia Górniczo Hutnicza im. Stanisława Staszica, dostępny na stronie:\\
   \url{http://home.agh.edu.pl/~tarasiuk/dydaktyka/index.php/statystykainzynierska}
 \bibitem{lamport94}
-  Małgorzata Nowina-Konopka, Andrzej Zięba,
-  \emph{Ćwiczenie 13. Współczynnik lepkości}, Kraków, Akademia Górniczo Hutnicza im. Stanisława Staszica, dostępny na stronie:\\
-  \url{http://www.ftj.agh.edu.pl/zdf/zeszyt/3_13n.pdf}
+ Andrzej Zięba,
+ \emph{Opracowanie danych pomiarowych} [on-line], Kraków, Akademia Górniczo Hutnicza im. Stanisława Staszica, dostępny na stronie:\\
+  \url{http://www.ftj.agh.edu.pl/zdf/danepom.pdf}
+  \label{statystyka}
+
 
 
 \end{thebibliography}
 \vspace{2cm}
+\newpage
+	\begin{figure}[p]
+		\centering
+		\includegraphics[width=0.7\textwidth]{wykres_T/wykres1.png}
+		\caption{Wykres zależności okresu wahadła od jego długości.}
+		\label{wykres1}
+	\end{figure}
+	
 
-
+	\begin{figure}[p]
+		\centering
+		\includegraphics[width=0.7\textwidth]{wykres_T2/wykres2.png}
+		\caption{Wykres zależności kwadratu okresu wahadła od jego długości.}
+		\label{wykres2}
+	\end{figure}
+	
 
 \end{document}
 
